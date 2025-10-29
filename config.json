@@ -1,0 +1,6 @@
+{
+    "ebay_url": "https://www.ebay.ie/itm/187683567884?_skw=duck&itmmeta=01K8QRDPSYA1FGVY8ARQKHJ168&hash=item2bb2cff90c:g:25sAAeSwCHJo~VUs&itmprp=enc%3AAQAKAAAA4FkggFvd1GGDu0w3yXCmi1c%2FcikRty2FyKUSJfRsk2DFPjawjDKVjNTK0wwzYbd74Q2ogcrZYZmNCSSoqZ0x6zMXM5mZLohS1qBuBFrxDHVV0HV3hbRNb%2Fyic0HbpQc6h6Qeoko%2FYG5eDMZoL8ytEyQC7BB0c%2BqaaGGau%2FkxUMZ8NZY%2B%2FbHKYVmFpTVYeo%2B7WBrAh81TxAVsV%2FhjUw1CmhkZj7w7OVk8LS01nWQnAukTfmwsQ%2F3yIrADXs%2FW7JRW7vh%2Fl%2BoYJuk0qQQbtoQ6Si1OyrgfqmEaWY8pw5dZDPT3%7Ctkp%3ABFBMou22-MVm",
+    "target_price": 6.50, 
+    "ntfy_topic_name": "ebayducks",
+    "check_times": ["09:00", "21:00"]
+}
