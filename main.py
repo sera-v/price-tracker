@@ -9,8 +9,11 @@ def load_config():
         return data
 
 def save_price(price):
-    with open('price_history.json', 'r') as pfile:
-        data = json.load(pfile)
+    try: 
+        with open('price_history.json', 'r') as pfile:
+            data = json.load(pfile)
+    except FileNotFoundError:
+        data = {}
 
     data[datetime.now().isoformat()] = price
 
@@ -31,7 +34,7 @@ def main():
 
     if price <= target:
         print("Target reached.")
-        send_ntfy_notification(config['ntfy_topic_name'], url)
+        send_ntfy_notification(config['ntfy_topic_name'])
     else:
         print("Target not reached...")
 
