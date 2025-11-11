@@ -1,0 +1,31 @@
+name: Ebay Price Checker Workflow
+
+run-name: ${{ github.actor }} is running the price checker. 
+
+on:
+    workflow_dispatch: #adds run workflow button for manual
+jobs:
+    check-price:
+        runs-on: ubuntu-latest
+
+        steps:
+            #checkout code
+            - uses: actions/checkout@v3
+            
+            #install py
+            - uses: actions/setup-python@v4
+              with:
+                python-version: '3.11'
+             #dependencies, exe       
+            - run: pip install requests beautifulsoup4
+            - run: python main.py
+
+            #commit, update history, push
+            - run: |
+                git config --local user.email "github-actions[bot]@users.noreply.github.com"
+                git config --local user.name "github-actions[bot]"
+                git add price_history.json
+                git diff --quiet && git diff --staged --quiet || git commit -m "Update price history - $(date)"
+                git push
+        
+
