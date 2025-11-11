@@ -22,6 +22,10 @@ def get_ebay_price(url):
     html = response.text
     soup = BeautifulSoup(html, "html.parser")
 
+    #debug inspect soup
+    with open("debug.html", "w", encoding="utf-8") as f:
+        f.write(soup.prettify())
+
     price_container = soup.find("div", {"class":"x-price-primary"})
     price = price_container.find("span", {"class": "ux-textspans"})
 
